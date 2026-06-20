@@ -1,0 +1,13 @@
+前端逆向 Skills                         Skill	作用
+web-reverse-master	全能一体机。整合反混淆、算法逆向、补环境、验证码对抗、CDP 桥接、Protobuf 全链路，内置 Phase 0-4 完整流程。目标明确直接开干。
+web-reverse-workflow	工作流入口。判断阶段并路由到对应子 Skill。
+web-reverse-brainstorming	路线设计。分析风控/验证码/混淆程度，选择最优技术路线（A/B/C）。
+web-reverse-writing-plans	编写 Plan。拆解逆向目标为可执行步骤，产出 plan.md。
+web-reverse-executing-plans	按计划执行。按证据链逐步推进每个步骤。
+web-reverse-test-driven-development	样本驱动复现。用真实请求样本对照，先写校验再还原 sign/token/encrypt。
+web-reverse-systematic-debugging	证据链排错。签名不一致、补环境失败、Hook 无效、结果漂移等问题的系统性排查。
+ast-deobfuscation	JS 反混淆。Babel AST 分层还原：字符串表、控制流平坦化、dispatcher、OB 变种等。适配 reese84/顶象/极验4/易盾/小红书等。
+env-patcher	补环境。为 Node.js VM 生成浏览器 API 模拟脚本（window/document/navigator/Canvas/WebGL/Audio），支持极验/易盾/jcap/AWSC/数美等 SDK。
+param-encryptor	参数加密还原。专注请求参数的加密/签名逻辑分析与纯算实现。
+captcha-solver	验证码识别。滑块/点选/算术等验证码的识别与绕过方案。
+spider-king	爬虫工程化。将逆向成果组装为生产级 Python 协议采集脚本。
