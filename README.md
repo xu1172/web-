@@ -11,6 +11,6 @@ js-reverse-mcp 启动
     → 发现活跃浏览器的 CDP debug_port
       → 用 --browserUrl http://127.0.0.1:{debug_port} 启动 js-reverse-mcp
         → js-reverse-mcp 直接控制 AdsPower 指纹浏览器！
-        可以让claude code帮你完成这个配置
+        可以让 ai Agent帮你完成这个配置
 
         
