@@ -1,0 +1,162 @@
+{
+  "inputPath": "e:\\PythonCodeObject1\\catpHelp\\crv-captcha\\assets\\captcha.js",
+  "outputDir": "e:\\PythonCodeObject1\\catpHelp\\crv-captcha\\assets\\deob-captcha",
+  "hint": "cn-bidding-ob",
+  "selectedPattern": {
+    "id": "cn-bidding-ob",
+    "displayName": "cn-bidding-ob",
+    "reference": "references/patterns/cn-bidding-ob.md",
+    "families": [
+      "ob-variant"
+    ],
+    "notes": [
+      "Keep OB-family tweaks in a dedicated adapter so the common pipeline stays conservative.",
+      "Track remaining loop-switch residue after the OB adapter stage."
+    ]
+  },
+  "detections": [
+    {
+      "id": "cn-bidding-ob",
+      "score": 10,
+      "reasons": [
+        "hint:ob"
+      ]
+    },
+    {
+      "id": "mps-ob",
+      "score": 10,
+      "reasons": [
+        "hint:ob"
+      ]
+    },
+    {
+      "id": "geetest4",
+      "score": 3,
+      "reasons": [
+        "content:/geetest/i"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": "normalize",
+      "script": "normalize-structure.js",
+      "outputFile": "01_normalize.js",
+      "timeoutMs": 60000,
+      "durationMs": 652,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "prune",
+      "script": "prune-fake-branches.js",
+      "outputFile": "02_prune.js",
+      "timeoutMs": 60000,
+      "durationMs": 416,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "inline_dispatchers",
+      "script": "inline-dispatchers.js",
+      "outputFile": "03_inline_dispatchers.js",
+      "timeoutMs": 120000,
+      "durationMs": 436,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "ob_variant_pass",
+      "script": "patterns/ob-variant-pass.js",
+      "outputFile": "04_ob_variant_pass.js",
+      "timeoutMs": 360000,
+      "durationMs": 1781,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "flatten",
+      "script": "flatten-array-control-flow.js",
+      "outputFile": "05_flatten.js",
+      "timeoutMs": 180000,
+      "durationMs": 638,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "if_to_switch",
+      "script": "if-chain-to-switch.js",
+      "outputFile": "06_if_to_switch.js",
+      "timeoutMs": 90000,
+      "durationMs": 602,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "prune",
+      "script": "prune-fake-branches.js",
+      "outputFile": "07_prune.js",
+      "timeoutMs": 60000,
+      "durationMs": 622,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "ob_variant_pass",
+      "script": "patterns/ob-variant-pass.js",
+      "outputFile": "08_ob_variant_pass.js",
+      "timeoutMs": 360000,
+      "durationMs": 1111,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "normalize",
+      "script": "normalize-structure.js",
+      "outputFile": "09_normalize.js",
+      "timeoutMs": 60000,
+      "durationMs": 438,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    }
+  ],
+  "status": "ok",
+  "failedStep": null,
+  "lastGoodFile": "09_normalize.js",
+  "finalMetrics": {
+    "filePath": "e:\\PythonCodeObject1\\catpHelp\\crv-captcha\\assets\\deob-captcha\\final.js",
+    "lineCount": 7202,
+    "splitPipeCount": 0,
+    "loopSwitchCount": 0,
+    "opcodeIfChainCount": 0,
+    "dispatcherWrapperCount": 0,
+    "hexIdentifierCount": 0
+  }
+}
