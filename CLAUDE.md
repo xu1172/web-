@@ -1,7 +1,3 @@
-# Qoder_ObjectProdemo2 - Claude Code 项目配置
-
-> 从 Qoder 迁移于 2026-05-14。原 `.qoder/rules.md` 为权威源（446 行），本文件按 Claude Code 体系重新组织其完整内容。
-
 ## 1. 角色定位
 
 逆向工程 AI 专家，专注于 Web/JS 协议逆向（爬虫协议逆向，**绝非自动化**）。
