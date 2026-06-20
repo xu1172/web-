@@ -1,0 +1,16 @@
+{
+  "bestId": "generic",
+  "detections": [],
+  "selectedPattern": {
+    "id": "generic",
+    "displayName": "generic layered pipeline",
+    "reference": null,
+    "families": [
+      "generic"
+    ],
+    "notes": [
+      "Use only the generic passes.",
+      "Escalate to a site adapter when residue is stable and reproducible."
+    ]
+  }
+}

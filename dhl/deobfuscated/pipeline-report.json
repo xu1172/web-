@@ -1,0 +1,116 @@
+{
+  "inputPath": "E:\\PythonCodeProject\\sites\\dhl\\assets\\akamai_sensor.js",
+  "outputDir": "E:\\PythonCodeProject\\sites\\dhl\\deobfuscated",
+  "hint": "generic",
+  "selectedPattern": {
+    "id": "generic",
+    "displayName": "generic layered pipeline",
+    "reference": null,
+    "families": [
+      "generic"
+    ],
+    "notes": [
+      "Use only the generic passes.",
+      "Escalate to a site adapter when residue is stable and reproducible."
+    ]
+  },
+  "detections": [],
+  "steps": [
+    {
+      "id": "normalize",
+      "script": "normalize-structure.js",
+      "outputFile": "01_normalize.js",
+      "timeoutMs": 60000,
+      "durationMs": 480,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "prune",
+      "script": "prune-fake-branches.js",
+      "outputFile": "02_prune.js",
+      "timeoutMs": 60000,
+      "durationMs": 305,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "inline_dispatchers",
+      "script": "inline-dispatchers.js",
+      "outputFile": "03_inline_dispatchers.js",
+      "timeoutMs": 120000,
+      "durationMs": 323,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "flatten",
+      "script": "flatten-array-control-flow.js",
+      "outputFile": "04_flatten.js",
+      "timeoutMs": 180000,
+      "durationMs": 474,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "if_to_switch",
+      "script": "if-chain-to-switch.js",
+      "outputFile": "05_if_to_switch.js",
+      "timeoutMs": 90000,
+      "durationMs": 328,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "prune",
+      "script": "prune-fake-branches.js",
+      "outputFile": "06_prune.js",
+      "timeoutMs": 60000,
+      "durationMs": 316,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    },
+    {
+      "id": "normalize",
+      "script": "normalize-structure.js",
+      "outputFile": "07_normalize.js",
+      "timeoutMs": 60000,
+      "durationMs": 312,
+      "status": "ok",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": ""
+    }
+  ],
+  "status": "ok",
+  "failedStep": null,
+  "lastGoodFile": "07_normalize.js",
+  "finalMetrics": {
+    "filePath": "E:\\PythonCodeProject\\sites\\dhl\\deobfuscated\\final.js",
+    "lineCount": 3742,
+    "splitPipeCount": 0,
+    "loopSwitchCount": 2,
+    "opcodeIfChainCount": 0,
+    "dispatcherWrapperCount": 0,
+    "hexIdentifierCount": 0
+  }
+}
